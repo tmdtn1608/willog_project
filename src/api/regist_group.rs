@@ -8,6 +8,9 @@ use sqlx::{MySql, Pool};
 use crate::services::{CreateGroup, GetGroup};
 use crate::structs::{GroupRegistRequest, GroupRegistResponse};
 
+/**
+ * 그룹등록
+ */
 #[post("/Regist/Group", format = "json", data = "<body>")]
 pub async fn regist_group_controller(
     pool: &State<Pool<MySql>>,

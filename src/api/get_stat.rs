@@ -10,7 +10,9 @@ use crate::structs::{
     TemperatureDeviceRequest, TemperatureDeviceResponse, TemperatureGroupRequest,
     TemperatureGroupResponse,
 };
-
+/**
+ * 장치별 온도통계
+ */
 #[post("/GetTemperature/Device", format = "json", data = "<body>")]
 pub async fn get_temperature_device_controller(
     pool: &State<Pool<MySql>>,
@@ -34,8 +36,9 @@ pub async fn get_temperature_device_controller(
     Custom(Status::Ok, json_str)
 }
 
-/* **********************************************************************************/
-
+/**
+ * 그룹별 온도통계
+ */
 #[post("/GetTemperature/Group", format = "json", data = "<body>")]
 pub async fn get_temperature_group_controller(
     pool: &State<Pool<MySql>>,

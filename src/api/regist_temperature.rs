@@ -7,6 +7,9 @@ use rocket::serde::json::Json;
 use rocket::{post, State};
 use sqlx::{MySql, Pool};
 
+/**
+ * 온도 등록
+ */
 #[post("/Set/Temperature", format = "json", data = "<body>")]
 pub async fn set_temperature_controller(
     pool: &State<Pool<MySql>>,
@@ -21,7 +24,6 @@ pub async fn set_temperature_controller(
 
     let insert_result = set_temperature_service.add(pool).await;
 
-    // 실행확인
     let result_msg = if insert_result {
         "success".to_string()
     } else {

@@ -4,6 +4,9 @@ use crate::{
 };
 use sqlx::MySqlPool;
 
+/**
+ * 온도생성 구조체
+ */
 pub struct SetTemperature {
     pub d_snumber: String,
     pub temperature: String,
@@ -11,6 +14,9 @@ pub struct SetTemperature {
     pub registered_at: String,
 }
 
+/**
+ * 온도조회 구조체
+ */
 pub struct GetTemperature {
     pub start_date: String,
     pub end_date: String,

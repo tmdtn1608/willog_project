@@ -8,6 +8,9 @@ use sqlx::{MySql, Pool};
 use crate::services::{CreateDevice, GetDevice, GetGroup};
 use crate::structs::{DataResponseBody, DeviceRegistRequest, DeviceRegistResponse};
 
+/**
+ * 장치등록
+ */
 #[post("/Regist/Device", format = "json", data = "<body>")]
 pub async fn regist_device_controller(
     pool: &State<Pool<MySql>>,

@@ -1,11 +1,17 @@
 use crate::structs::DeviceGroupBody;
 use sqlx::MySqlPool;
 
+/**
+ * 디바이스 생성 구조체
+ */
 pub struct CreateDevice {
     pub d_snumber: String,
     pub g_snumber: String,
 }
 
+/**
+ * 디바이스 조회 구조체
+ */
 pub struct GetDevice {
     pub did: String,
 }

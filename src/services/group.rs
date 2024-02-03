@@ -1,9 +1,16 @@
 use crate::structs::DeviceGroupBody;
 use sqlx::MySqlPool;
 
+/**
+ * 그룹생성 구조체
+ */
 pub struct CreateGroup {
     pub g_snumber: String,
 }
+
+/**
+ * 그룹조회 구조체
+ */
 pub struct GetGroup {
     pub g_snumber: String,
     pub gid: String,
