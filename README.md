@@ -14,15 +14,19 @@
   - regex : 정규표현식
 
 - 환경설정
-  - rustc & cargo
-    - rustup override set nightly로 추가 설정
+
+  - cargo : rustup override set nightly로 추가 설정
+    ```
+    cargo 1.77.0-nightly (7bb7b5395 2024-01-20)
+    ```
   - mysql 8.0
+
 - 구현내용
   - 그룹추가 : /Regist/Group
   - 장비추가 : /Regist/Device
   - 온도 저장 : /Set/Temperature
   - 장비별 통계 : /GetTemperature/Device
   - 그룹별 통계 : /GetTemperature/Group
-  - 환경파일 : .env 사용
-    - DATABASE_URL : 데이터베이스 url
-      - mysql://[id]@[address]:[port]/[dbname]
+- .env 구성
+  - DATABASE_URL : 데이터베이스 url
+    - mysql://[id]@[address]:[port]/[dbname]
